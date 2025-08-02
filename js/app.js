@@ -109,5 +109,5 @@ document.getElementById('transaction-history-section-btn').addEventListener("cli
 // log out from account
 
 document.getElementById('log-out-btn').addEventListener('click', function(){
-    window.location.href = '/index.html'
+    window.location.href = '../index.html';
 })
