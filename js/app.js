@@ -25,7 +25,7 @@ document.getElementById("add-money-btn").addEventListener("click", function () {
         <div class="w-8 h-8">
             <img
             class="w-full h-full"
-            src="assets/wallet1.png"
+            src="../assets/wallet1.png"
             alt=""/>
         </div>
         <div>
