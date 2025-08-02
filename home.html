@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style/home-style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-black flex justify-center items-center">
+    <div style="background: rgb(233, 234, 237)" class="w-[500px] min-h-[100vh]">
+      <header class="bg-white p-3 rounded-b-3xl">
+        <section class="flex justify-between items-center">
+          <div class="flex items-center gap-2 w-[50%]">
+            <div class="h-16">
+              <img class="h-[inherit]" src="assets/Group.png" alt="" />
+            </div>
+            <div>
+              <p class="text-2xl font-bold text-gray-800">$<span id="main-balance">5700</span></p>
+              <p class="text-lg text-gray-500">Available Balance</p>
+            </div>
+          </div>
+          <button id="log-out-btn" class="btn btn-soft btn-primary">
+            Log Out <i class="fa-solid fa-arrow-right-from-bracket"></i>
+          </button>
+        </section>
+      </header>
+      <div class="divider"></div>
+      <main class="">
+        <!-- action section -->
+        <section class="p-3 flex flex-col gap-5">
+          <article class="intro">
+            <h2 class="text-xl font-semibold">🔥Welcome to Payooo!</h2>
+            <p
+              style="line-height: 20px"
+              class="text-base font-semibold text-gray-500"
+            >
+              Enjoy easy and convenient financial services with us. Cashout
+              charge is low and
+            </p>
+          </article>
+          <!-- action container -->
+          <article class="grid grid-cols-3 gap-5 py-2 action-btn-container">
+            <div id="add-money-section-btn" class="action-btn">
+              <div class="flex justify-center items-center">
+                <img src="assets/wallet1.png" alt="" />
+              </div>
+              <p class="text-center font-semibold">Add Money</p>
+            </div>
+            <div id="cash-out-section-btn" class="action-btn">
+              <div class="flex justify-center items-center">
+                <img src="assets/send1.png" alt="" />
+              </div>
+              <p class="text-center font-semibold">Cash Out</p>
+            </div>
+            <div id="transfer-money-section-btn" class="action-btn">
+              <div class="flex justify-center items-center">
+                <img src="assets/money1.png" alt="" />
+              </div>
+              <p class="text-center font-semibold">Transfer Money</p>
+            </div>
+            <div class="action-btn">
+              <div class="flex justify-center items-center">
+                <img src="assets/bonus1.png" alt="" />
+              </div>
+              <p class="text-center font-semibold">Get Bonus</p>
+            </div>
+            <div class="action-btn">
+              <div class="flex justify-center items-center">
+                <img src="assets/purse1.png" alt="" />
+              </div>
+              <p class="text-center font-semibold">Pay Bill</p>
+            </div>
+            <div id="transaction-history-section-btn" class="action-btn">
+              <div class="flex justify-center items-center">
+                <img src="assets/transaction1.png" alt="" />
+              </div>
+              <p class="text-center font-semibold">Transactions</p>
+            </div>
+          </article>
+          <!-- add money section start -->
+          <article id="add-money-container" class="hidden appear-out">
+            <div class="add-money-section flex-col gap-5">
+              <h2 class="w-96 text-xl font-semibold text-gray-700">
+                Add money
+              </h2>
+              <div
+                class="add-money-container card bg-base-100 w-96 shrink-0 shadow-2xl"
+              >
+                <div class="card-body">
+                  <fieldset class="fieldset">
+                    <label class="label">Amount</label>
+                    <input
+                      id="add-money-amount"
+                      type="email"
+                      class="input"
+                      placeholder="Enter amount"
+                    />
+                    <label class="label">Pin Number</label>
+                    <input
+                      id="add-money-pin"
+                      type="password"
+                      class="input"
+                      placeholder="Enter pin"
+                    />
+                    <button id="add-money-btn" class="add-money-btn">
+                      Add Money
+                    </button>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!-- add money section end -->
+          <!-- cash out section star -->
+          <article class="hidden appear-out" id="cash-out-container">
+            <div class="add-money-section flex-col gap-5">
+              <h2 class="w-96 text-xl font-semibold text-gray-700">
+                Withdraw money from your account
+              </h2>
+              <div
+                class="add-money-container card bg-base-100 w-96 shrink-0 shadow-2xl"
+              >
+                <div class="card-body">
+                  <fieldset class="fieldset">
+                    <label class="label">Amount</label>
+                    <input
+                      id="cash-out-amount"
+                      type="email"
+                      class="input"
+                      placeholder="Enter amount"
+                    />
+                    <label class="label">Pin Number</label>
+                    <input
+                      id="cash-out-pin"
+                      type="password"
+                      class="input"
+                      placeholder="Enter pin"
+                    />
+                    <button id="cash-out-btn" class="add-money-btn">
+                      Withdraw Money
+                    </button>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!-- cash out section end -->
+          <!-- transfer money section start -->
+          <article class="hidden appear-out" id="transfer-money-container">
+            <div class="add-money-section flex-col gap-5">
+              <h2 class="w-96 text-xl font-semibold text-gray-700">
+                Transfer money from your account
+              </h2>
+              <div
+                class="add-money-container card bg-base-100 w-96 shrink-0 shadow-2xl"
+              >
+                <div class="card-body">
+                  <fieldset class="fieldset">
+                    <label class="label">Amount</label>
+                    <input
+                      id="transfer-money-amount"
+                      type="email"
+                      class="input"
+                      placeholder="Enter amount"
+                    />
+                    <label class="label">Pin Number</label>
+                    <input
+                      id="transfer-money-pin"
+                      type="password"
+                      class="input"
+                      placeholder="Enter pin"
+                    />
+                    <button id="add-money-btn" class="add-money-btn">
+                      Transfer Money
+                    </button>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!-- transfer money section end -->
+          <!-- transaction history section start  -->
+          <article class="hidden appear-out" id="transaction-history-container">
+            <div id="transaction-card" class="add-money-section flex-col gap-5">
+              <h2 class="w-96 text-xl font-semibold text-gray-700">
+                Transaction history
+              </h2>
+              <div class="transaction-history-container">
+                <div class="history-card">
+                  <div class="w-8 h-8">
+                    <img
+                      class="w-full h-full"
+                      src="assets/wallet1.png"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h5 class="font-semibold">Mobile Recharge</h5>
+                    <p class="text-sm">Today 01:44 AM</p>
+                  </div>
+                  <span class="dot-icon"
+                    ><i class="fa-solid fa-ellipsis-vertical"></i
+                  ></span>
+                </div>
+              </div>
+              <div class="transaction-history-container">
+                <div class="history-card">
+                  <div class="w-8 h-8">
+                    <img
+                      class="w-full h-full"
+                      src="assets/wallet1.png"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h5 class="font-semibold">Mobile Recharge</h5>
+                    <p class="text-sm">Today 01:44 AM</p>
+                  </div>
+                  <span class="dot-icon"
+                    ><i class="fa-solid fa-ellipsis-vertical"></i
+                  ></span>
+                </div>
+              </div>
+              <div class="transaction-history-container">
+                <div class="history-card">
+                  <div class="w-8 h-8">
+                    <img
+                      class="w-full h-full"
+                      src="assets/wallet1.png"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h5 class="font-semibold">Mobile Recharge</h5>
+                    <p class="text-sm">Today 01:44 AM</p>
+                  </div>
+                  <span class="dot-icon"
+                    ><i class="fa-solid fa-ellipsis-vertical"></i
+                  ></span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!-- transaction history section end  -->
+        </section>
+      </main>
+      <footer></footer>
+
+      <!-- scripted section -->
+      <script src="js/utilities.js"></script>
+      <script src="js/app.js"></script>
+    </div>
+  </body>
+</html>
