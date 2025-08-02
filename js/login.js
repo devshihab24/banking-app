@@ -3,7 +3,7 @@ document.getElementById("login-btn").addEventListener("click", (event) => {
   const numberValue = document.getElementById("phone-number").value;
   const pinValue = document.getElementById("pin-number").value;
   if(numberValue === '123456' && pinValue === '1234'){
-    window.location.href = '/home/home.html'
+    window.location.href = 'home/home.html'
   }
   else{
     alert('You entered wrong pin or invalid input!')
